@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Spotify Popularity</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{{ auth_url }}"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+                    </li>
+                </ul>
+                <!-- USE URL_FOR FOR LINKING TO LOGOUT -->
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid text-center">
+        <div class="home jumbotron">
+            <h1>Spotify Popularity</h1>
+            <div>
+                <p>Please login to see your top artist's popularity score!
+                </p><a data-v-f72ef9c0="" href="{{ auth_url }}" class="btn btn-success"
+                    style="min-width: 250px;">Login with Spotify</a>
+                <p style="font-size: 12px; padding-top: 8px; color: rgb(108, 117, 125);">By
+                    logging in, you agree to Spotify Developer API privacy
+                    policy</a></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid text-center">
+        <p>Jonathan S Li ©</p>
+    </footer>
+
+</body>
+
+</html>

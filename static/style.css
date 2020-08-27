@@ -1,0 +1,122 @@
+body {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+
+p {
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    justify-content: center;
+    text-align: center;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+    /* height: 450px */
+    height: 2000px
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+    padding-top: 20px;
+    background-color: white;
+    height: 100%;
+}
+
+
+table {
+    width: 100%;
+    border-width: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    border-collapse: collapse;
+}
+
+.space {
+    min-width: 5px;
+}
+
+.top-list {
+    padding-top: 10px;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+    background-color: white;
+    color: gray;
+    padding: 15px;
+    position: fixed;
+    left: 0;
+    /* height: 10%; */
+    bottom: 0;
+    width: 100%;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+
+    .row.content {
+        height: auto;
+    }
+}
+
+table>tr {
+    vertical-align: middle;
+}
+
+tr {
+    display: table-row;
+    vertical-align: middle;
+    /* border-color: inherit; */
+}
+
+tr>td {
+    padding-bottom: 7px;
+    max-height: 5px;
+}
+
+.space {
+    min-width: 5px;
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+.track-detail {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+}
+
+
+.top-list {
+    padding-top: 10px;
+}
+
+img.song-image {
+    cursor: pointer;
+    max-width: 60px;
+    width: auto;
+}
+
+.nav-tabs .nav-item {
+    width: 33%;
+    text-align: center;
+}

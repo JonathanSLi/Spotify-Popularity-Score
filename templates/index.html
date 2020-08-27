@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Spotify Popularity</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Spotify Popularity</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- USE URL_FOR FOR LINKING TO LOGOUT -->
+                    <li><a href="{{ url_for('sign_out') }}"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            <div>
+
+                <div class="home jumbotron">
+                    <p>Your Top 20 Artists' Popularity Score</p>
+                    <h1>{{ weighted_avg }}</h1>
+                    <p style="font-size: 12px; padding-top: 9px; color: rgb(108, 117, 125);"> Score from 0-100. The
+                        higher the number, the more well-known your artists are. </a></p>
+                </div>
+
+                <ul class="nav nav-tabs">
+                    <li class="nav-item"><a href="{{ url_for('shortTerm') }}"
+                            class="nav-link router-link-exact-active router-link-active active" aria-current="page">last
+                            4 weeks</a></li>
+                    <li class="nav-item"><a href="{{ url_for('mediumTerm') }}"
+                            class="nav-link router-link-active">last 6
+                            months</a></li>
+                    <li class="nav-item"><a href="{{ url_for('longTerm') }}"
+                            class="nav-link router-link-active">all time</a></li>
+                </ul>
+
+
+
+                <h2>Your Top Artists ({{ timeFrame }})</h2>
+                <div class="top-list">
+                    <table>
+                        <tr>
+                            <td style="vertical-align: middle;"></td>
+                            <td><strong></strong></td>
+                            <td class="space"></td>
+                            <td><img></td>
+                            <td class="space"></td>
+                            <td class="track-detail"><u>Artist</u></td>
+                            <td class="track-detail"><u>Popularity Score</u></td>
+                        </tr>
+                        {% for artist in artists %}
+                        <tr>
+                            <td style="vertical-align: middle;">
+                            </td>
+                            <td><strong>{{ loop.index }}</strong></td>
+                            <td class="space"></td>
+                            <td><img src="{{ artist['images'][0]['url'] }}" loading="lazy" class="song-image"></td>
+                            <td class="space"></td>
+                            <td class="track-detail">{{ artist['name'] }}</td>
+                            <td class="track-detail">{{ artist['popularity'] }}</td>
+                        </tr>
+                        
+
+                        {% endfor %}
+                    </table>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <footer class="container-fluid text-center">
+        <p>Jonathan S Li ©</p>
+    </footer>
+
+</body>
+
+</html>
