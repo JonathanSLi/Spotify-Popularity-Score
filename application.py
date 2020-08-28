@@ -54,7 +54,8 @@ def index():
     # # Step 4. Signed in, display data
 
     return redirect('/shortterm')
-# FIXME: hese 3 routes do the exact same shit. There should be a better way to do it.
+
+#routes for url based on time frame of top artists
 @app.route('/shortterm')
 def shortTerm():
     if session.get('uuid') is None:
