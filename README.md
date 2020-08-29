@@ -10,7 +10,7 @@ Displays a custom Spotify's user top 20 artists popularity score as well as a we
 
 * pip3 install spotipy Flask Flask-Session
 
-* Set up a Spotify Developer Application wher you will find Spotify Client ID and Client Secret. Add a redirect URI in your Splotify Application
+* Set up a Spotify Developer Application where you will find Spotify Client ID and Client Secret. Add a redirect URI in your Splotify Application
 
 * export SPOTIPY_CLIENT_ID=client_id_here
 * export SPOTIPY_CLIENT_SECRET=client_secret_here
