@@ -1,6 +1,6 @@
 # Spotify-Popularity-Score
 
-See DEMO: https://spotify-popularity-app.herokuapp.com/
+See DEMO: http://spotifypopularityscore.com
 
 ## About
 
